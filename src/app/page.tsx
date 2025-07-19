@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen bg-gradient-to-tr from-background from-40%        to-accent/30 p-6 flex  flex-col    ">
+    <main className=" min-h-screen bg-gradient-to-tr from-background from-40% to-accent/30 p-6 flex  flex-col    ">
       <nav className="container mx-auto flex justify-start max-sm:justify-center">
         <div className=" flex items-center gap-2">
           <Image src="/assets/logo.png" alt="logo" width={60} height={60} />
@@ -21,7 +21,10 @@ export default function Home() {
             Save your favorites, discover new ones — all in one simple app.
           </p>
 
-          <Link href="https://d2kx5b4i2igaaf.cloudfront.net/PersonalProject/Filmstash.apk" download>
+          <Link
+            href="https://d2kx5b4i2igaaf.cloudfront.net/PersonalProject/Filmstash.apk"
+            download
+          >
             <button className=" px-6 py-2 bg-accent text-background rounded-xl font-semibold mt-6 max-sm:mt-4 flex items-center gap-2 cursor-pointer hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40 transition-shadow duration-300 ">
               Download APK
               <ArrowDownToLine className="w-5 h-5" />
@@ -39,10 +42,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" absolute bottom-0 left-0 w-full py-2 px-12">
+      <div className=" absolute container bottom-0 -translate-x-1/2 left-1/2 w-full py-2  px-6 flex justify-center">
         <span>
           Made by{" "}
-          <Link href="/" className=" text-accent" target="_blank">
+          <Link href="https://lokesh-singh.vercel.app/" className=" text-accent" target="_blank">
             Lokesh Singh
           </Link>{" "}
         </span>
