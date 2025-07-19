@@ -1,103 +1,52 @@
 import Image from "next/image";
+import { ArrowDownToLine } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className=" min-h-screen bg-gradient-to-tr from-background from-40%        to-accent/30 p-6 flex  flex-col    ">
+      <nav className="container mx-auto flex justify-start max-sm:justify-center">
+        <div className=" flex items-center gap-2">
+          <Image src="/assets/logo.png" alt="logo" width={60} height={60} />
+          <p className=" text-xl">FilmStash</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </nav>
+
+      <div className=" flex-1  flex max-md:flex-col max-md:gap-20 max-sm:gap-12 max-md:py-12 max-sm:py-8 items-center justify-around gap-6">
+        <div className=" flex flex-col items-start max-md:items-center gap-4">
+          <h1 className="text-6xl max-lg:text-4xl max-sm:text-3xl max-w-4xl max-lg:max-w-2xl text-pretty leading-tight font-bold max-md:text-center">
+            Your Personal Movie Library — Anytime, Anywhere
+          </h1>
+          <p className=" text-lg max-sm:text-base text-neutral-200 font-medium max-md:text-center">
+            Save your favorites, discover new ones — all in one simple app.
+          </p>
+
+          <Link href="https://d2kx5b4i2igaaf.cloudfront.net/PersonalProject/Filmstash.apk" download>
+            <button className=" px-6 py-2 bg-accent text-background rounded-xl font-semibold mt-6 max-sm:mt-4 flex items-center gap-2 cursor-pointer hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40 transition-shadow duration-300 ">
+              Download APK
+              <ArrowDownToLine className="w-5 h-5" />
+            </button>
+          </Link>
+        </div>
+
+        <div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/assets/appmockup.png"
+            alt="App Mock up"
+            width={280}
+            height={280}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+
+      <div className=" absolute bottom-0 left-0 w-full py-2 px-12">
+        <span>
+          Made by{" "}
+          <Link href="/" className=" text-accent" target="_blank">
+            Lokesh Singh
+          </Link>{" "}
+        </span>
+      </div>
+    </main>
   );
 }
