@@ -21,15 +21,24 @@ export default function Home() {
             Save your favorites, discover new ones — all in one simple app.
           </p>
 
-          <Link
+        <div className=" flex flex-col gap-2">
+            <Link
             href="https://d2kx5b4i2igaaf.cloudfront.net/PersonalProject/Filmstash.apk"
             download
           >
             <button className=" px-6 py-2 bg-accent text-background rounded-xl font-semibold mt-6 max-sm:mt-4 flex items-center gap-2 cursor-pointer hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40 transition-shadow duration-300 ">
+             
               Download APK
               <ArrowDownToLine className="w-5 h-5" />
             </button>
           </Link>
+          <div className=" flex items-end gap-1 text-xs pl-2">Available only for Android  <Image
+                src="/android.svg"
+                alt="Android icon"
+                width={40}
+                height={40}
+              /></div>
+        </div>
         </div>
 
         <div>
@@ -45,7 +54,11 @@ export default function Home() {
       <div className=" absolute container bottom-0 -translate-x-1/2 left-1/2 w-full py-2  px-6 flex justify-center">
         <span>
           Made by{" "}
-          <Link href="https://lokesh-singh.vercel.app/" className=" text-accent" target="_blank">
+          <Link
+            href="https://lokesh-singh.vercel.app/"
+            className=" text-accent"
+            target="_blank"
+          >
             Lokesh Singh
           </Link>{" "}
         </span>
