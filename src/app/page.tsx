@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className=" flex flex-col gap-2">
             <Link
-              href="https://d2kx5b4i2igaaf.cloudfront.net/PersonalProject/FilmStash.apk"
+              href="https://d2kx5b4i2igaaf.cloudfront.net/SideProjects/FilmStash.apk"
               download
             >
               <button className=" px-6 py-2 bg-accent text-background rounded-xl font-semibold mt-6 max-sm:mt-4 flex items-center gap-2 cursor-pointer hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40 transition-shadow duration-300 ">
